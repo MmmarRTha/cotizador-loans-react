@@ -5,6 +5,7 @@ import { moneyFormat } from './helpers'
 
 function App() {
     const [amount, setAmount] = useState(25000);
+    const [months, setMonths] = useState(6);
 
     const MIN = 0;
     const MAX = 50000;
@@ -61,10 +62,12 @@ function App() {
 
         <select 
             className='w-full p-2 mt-5 text-xl font-bold text-center text-gray-500 bg-white border border-gray-300 rounded-lg'
+            value={ months }
+            onChange={ e => setMonths(+e.target.value)}
         >
-            <option value="">6 meses</option>
-            <option value="">12 meses</option>
-            <option value="">24 meses</option>
+            <option value="6">6 meses</option>
+            <option value="12">12 meses</option>
+            <option value="24">24 meses</option>
         </select>
     </div>
   )
