@@ -40,26 +40,28 @@ function App() {
 
   return (
     <><div>
-          <h1 className='mt-20 text-6xl text-center text-black'>Préstamos rápidos</h1>
+          <h1 className='mt-10 text-5xl text-center text-black'>Préstamos rápidos</h1>
       </div>
-        <div className="max-w-2xl p-10 mx-auto my-20 bg-white rounded-lg shadow-lg shadow-slate-50">
+        <div className="max-w-2xl p-10 mx-auto my-10 bg-white rounded-lg shadow-lg shadow-slate-50">
             <Header />
-            <div className='flex justify-between my-6'>
+            <div className='flex items-center justify-center my-6'>
                 <Button
                     operator='-'
+                    margin=' mr-3'
                     fn={handleClickDecrement} />
+                <input
+                    type="range"
+                    className="w-3/5 h-6 bg-gray-200 accent-purple-500 hover:accent-purple-600"
+                    onChange={handleChange}
+                    min={MIN}
+                    max={MAX}
+                    step={STEP}
+                    value={amount} />
                 <Button
                     operator='+'
+                    margin=' ml-3'
                     fn={handleClickIncrement} />
             </div>
-            <input
-                type="range"
-                className="w-full h-6 bg-gray-200 accent-purple-500 hover:accent-purple-600"
-                onChange={handleChange}
-                min={MIN}
-                max={MAX}
-                step={STEP}
-                value={amount} />
             <p className='my-10 text-5xl font-extrabold text-center text-fuchsia-700'>
                 {moneyFormat(amount)}
             </p>

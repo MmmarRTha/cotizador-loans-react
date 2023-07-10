@@ -1,9 +1,9 @@
-function Button({operator, fn}) {
-
+function Button({operator, fn, margin}) {
+    const buttonStyle = 'flex justify-center w-10 h-10 text-2xl font-bold text-white bg-purple-500 rounded-full hover:bg-purple-600'
   return (
     <button
         type='button'
-        className='px-4 py-2 font-bold text-white bg-purple-500 rounded-full hover:bg-purple-600'
+        className={ margin === 'ml-3' ? (buttonStyle + margin) : (buttonStyle + margin) }
         onClick={fn}
     >{operator}</button>
   )
