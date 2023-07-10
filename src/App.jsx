@@ -54,6 +54,18 @@ function App() {
         <p className='my-10 text-5xl font-extrabold text-center text-fuchsia-700'> 
            {moneyFormat(amount)}
         </p>
+
+        <h2 className='text-2xl font-extrabold text-center text-gray-500'>
+            <span className='text-fuchsia-600'>Plazo</span> a pagar
+        </h2>
+
+        <select 
+            className='w-full p-2 mt-5 text-xl font-bold text-center text-gray-500 bg-white border border-gray-300 rounded-lg'
+        >
+            <option value="">6 meses</option>
+            <option value="">12 meses</option>
+            <option value="">24 meses</option>
+        </select>
     </div>
   )
 }
