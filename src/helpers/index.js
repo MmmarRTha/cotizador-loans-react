@@ -18,7 +18,9 @@ const calculateTotal = (amount, term) => {
         total = amount * 1.2;
     }
 
-    if (term === 6) {
+    if (term === 3) {
+        total *= 1.05;
+    } else if (term === 6) {
         total *= 1.1;
     } else if (term === 12) {
         total *= 1.2;
